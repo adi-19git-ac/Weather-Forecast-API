@@ -1,0 +1,168 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://static1.squarespace.com/static/5274232de4b08c252c7181df/527717ece4b02d52327e4097/560abb25e4b08cd2ff75c88d/1443543846798/2015+September+Sunset+Steps+Beach+web.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 85.5vh;
+    backdrop-filter: blur(5px);
+}
+
+.search-panel {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+#loc {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    color: white;
+}
+
+#cityName {
+    margin: 3px;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --------Search Box------------------ */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    padding: 20px;
+    width: 50%;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border-bottom: 1px solid cyan;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    /* margin-right: 20px; */
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+    font-size: 1em;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.search-container button[type="submit"] {
+    background-color: cyan;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 100%;
+    /* border-radius: 0 5px 5px 0; */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button[type="submit"]:hover {
+    background-color: white;
+    color: #000;
+}
+
+@media screen and (max-width: 800px) {
+    .search-container {
+        margin: 120px 20px 60px 20px;
+    }
+}
+
+/* -----------------Card------------------------ */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 400px;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 5px 13px 20px black;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+/* ----------------------------------------- */
+.weather {
+    margin: 5px;
+    /*  background-color: rgb(106, 215, 255); */
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.image {
+    height: 140px;
+    width: 100%;
+}
+
+.imgClass {
+    height: 140px;
+    width: 100%;
+}
+
+.weather {
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.date,
+.humidity,
+.wind,
+.temp {
+    color: #fff;
+    margin: 10px;
+    font-weight: bold;
+}

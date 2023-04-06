@@ -1,0 +1,106 @@
+/* Navigation CSS */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 10px 9%;
+    /* background: #1f242d; */
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 100;
+    /* backdrop-filter: blur(8px); */
+}
+
+.logo {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    height: 40px;
+    cursor: default;
+    background: linear-gradient(to left, #1c92d2, #1CB5E0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+
+a.active {
+    color: cyan;
+    text-decoration: underline;
+}
+
+.navbar a:hover,
+a.active {
+    color: cyan;
+    transition: .3s;
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        width: 80%;
+        height: 50vx;
+        padding: 20px -5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .header a {
+        height: 50px;
+    }
+}
+
+/* Animation */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
